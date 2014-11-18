@@ -4,11 +4,10 @@
 require.config({
 
 	// Initialize the application with the main application file
-	deps: ['plugins/console', 'main'],
+	deps: ['plugins/console', 'plugins/kinetic', 'main'],
 
 	paths: {
 		jquery: '../components/jquery/dist/jquery.min'
-		// More additional paths here
 	},
 
 	shim: {

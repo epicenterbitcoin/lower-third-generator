@@ -1,1 +1,36 @@
-<p>Hello world! This is INIT.</p>
+<section id="generator-input">
+
+	<form id="generator">
+		
+		<legend>Use this form to generate the lower third image required for the Epicenter Bitcoin Hangout call. You will be instructed during preparation on how to add the image to your screen.</legend>
+	
+		<ul>
+			<li>
+				<label for="guest-name">Full name</label>
+				<input id="guest-name" type="text" placeholder="ex: Brain Fabian Crain" />
+			</li>
+			<li>
+				<label for="guest-twitter">Twitter Username</label>
+				<input id="guest-twitter" type="text" placeholder="ex: @crainbf" />
+			</li>
+			<li>
+				<label for="guest-title">Title and Company</label>
+				<input id="guest-title" type="text" placeholder="ex: Co-host at Epicenter Bitcoin" />
+			</li>
+		</ul>	
+		
+		<input id="submit" type="submit" value="Generate" />
+	
+	</form>
+
+</section>
+
+<section id="generator-output">
+
+	<div id="canvas-container"></div>
+	
+	<div id="lower-third-container">
+		<img src="img/example.jpg" />
+	</div>
+
+</section>
