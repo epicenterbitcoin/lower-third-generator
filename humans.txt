@@ -3,11 +3,7 @@
 
 # TEAM
 
-    <name> -- <role> -- <twitter>
-
-# THANKS
-
-    <name>
+    Sebastien Couture -- Co-founder Epicenter Bitcoin -- @seb2point0
 
 # TECHNOLOGY COLOPHON
 

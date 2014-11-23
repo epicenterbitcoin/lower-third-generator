@@ -54,6 +54,12 @@ module.exports = {
 		dest: 'dist/img/'
 	},
 
+	// Fonts
+	fonts: {
+		src: 'fonts/',
+		dest: 'dist/fonts/'
+	},
+
 	tests: {
 		src: 'test/specs/**/*spec.js',
 		config: 'test/test-main.js'
