@@ -128,7 +128,7 @@ require([
 				y: 867,
 				text: guestName,
 				fontSize: 80,
-				fontFamily: 'Reso Semi Bold',
+				fontFamily: 'Reso',
 				fill: options.textColorTop,
 		        shadowColor: options.shadowColorTop,
 		        shadowBlur: 0,
@@ -166,36 +166,40 @@ require([
 			twitterImage.src = 'img/icon-twitter.png';
 			
 			twitterImage.onload = function() {
-							
-				var twitterImageObject = new Kinetic.Image({
-					x: 0,
-					y: 0,
-					width: twitterImage.naturalWidth,
-					height: twitterImage.naturalHeight,
-					image: twitterImage,
-					shadowColor: options.shadowColorTop,
-			        shadowBlur: 0,
-			        shadowOffset: {x: options.shadowOffset, y: options.shadowOffset},
-					shadowOpacity: options.shadowOpacityTop
-				});	
-								
-				var guestTwitterObject = new Kinetic.Text({
-					x: twitterImage.naturalWidth + options.twitterOffsetX,
-					y: -5,
-					text: guestTwitter,
-					fontSize: 40,
-					fontFamily: 'Reso',
-					fill: options.textColorTop,
-					shadowColor: options.shadowColorTop,
-			        shadowBlur: 0,
-			        shadowOffset: {x: options.shadowOffset, y: options.shadowOffset},
-					shadowOpacity: options.shadowOpacityTop
-				});
 				
-				twitterGroup.add(twitterImageObject);
-				twitterGroup.add(guestTwitterObject);
-				layer.add(twitterGroup);
-				layer.draw();
+				if( guestTwitter.length > 0 ) {
+					
+					var twitterImageObject = new Kinetic.Image({
+						x: 0,
+						y: 0,
+						width: twitterImage.naturalWidth,
+						height: twitterImage.naturalHeight,
+						image: twitterImage,
+						shadowColor: options.shadowColorTop,
+				        shadowBlur: 0,
+				        shadowOffset: {x: options.shadowOffset, y: options.shadowOffset},
+						shadowOpacity: options.shadowOpacityTop
+					});	
+									
+					var guestTwitterObject = new Kinetic.Text({
+						x: twitterImage.naturalWidth + options.twitterOffsetX,
+						y: -5,
+						text: guestTwitter,
+						fontSize: 40,
+						fontFamily: 'Reso',
+						fill: options.textColorTop,
+						shadowColor: options.shadowColorTop,
+				        shadowBlur: 0,
+				        shadowOffset: {x: options.shadowOffset, y: options.shadowOffset},
+						shadowOpacity: options.shadowOpacityTop
+					});
+					
+					twitterGroup.add(twitterImageObject);
+					twitterGroup.add(guestTwitterObject);
+					layer.add(twitterGroup);
+					layer.draw();
+					
+				}
 				
 				stage.toDataURL({
 					callback: function(dataUrl) {
