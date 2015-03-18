@@ -12,3 +12,5 @@ resume.html
 node_modules
 test/coverage
 test/dist
+
+.DS_STORE
