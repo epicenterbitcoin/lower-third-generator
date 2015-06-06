@@ -28,6 +28,7 @@ main {
 	a {
 		display: block;
 		position: relative;
+		background: #385060;
 		&:before {
 			@include transition(all 0.2s);
 			content: 'Download Image';
@@ -38,7 +39,7 @@ main {
 			font-weight: 900;
 			letter-spacing: -1px;
 			font-size: 40px;
-			color: #000;
+			color: #fff;
 			text-align: center;
 			text-transform: uppercase;
 			vertical-align: middle;

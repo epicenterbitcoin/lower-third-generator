@@ -14,7 +14,7 @@ require([
 	
 	var png = document.getElementById('lower-third-container');
 	
-    var fonts = ['Reso', 'Reso Semi Bold'];
+    var fonts = ['Rajdhani-Regular', 'Rajdhani-Semibold'];
     
     var images = [
 	    'img/lower-third-template.png',
@@ -22,16 +22,11 @@ require([
     ];
     
     var options = {
-		textOffsetX: 240,
+		textOffsetX: 400,
 		twitterGroupOffsetX: 40,
 		twitterOffsetX: 10,
-		shadowOffset: 3,
 		textColorTop: '#ffffff',
-		textColorBottom: '#3a3a3a',
-		shadowColorTop: '#0a856d',
-		shadowColorBottom: '#ffffff',
-		shadowOpacityTop: 0.75,
-		shadowOpacityBottom: 1,
+		textColorBottom: '#385060'
     };
 	
 	var stage = new Kinetic.Stage({
@@ -125,28 +120,20 @@ require([
 			
 			var guestNameObject = new Kinetic.Text({
 				x: options.textOffsetX,
-				y: 867,
+				y: 868,
 				text: guestName,
-				fontSize: 80,
-				fontFamily: 'Reso',
-				fill: options.textColorTop,
-		        shadowColor: options.shadowColorTop,
-		        shadowBlur: 0,
-		        shadowOffset: {x: options.shadowOffset, y: options.shadowOffset},
-		        shadowOpacity: options.shadowOpacityTop
+				fontSize: 90,
+				fontFamily: 'Rajdhani-Semibold',
+				fill: options.textColorTop
 			});
 
 			var guestTitleObject = new Kinetic.Text({
 				x: options.textOffsetX,
-				y: 972,
+				y: 976,
 				text: guestTitle,
-				fontSize: 40,
-				fontFamily: 'Reso',
-				fill: options.textColorBottom,
-		        shadowColor: options.shadowColorBottom,
-		        shadowBlur: 0,
-		        shadowOffset: {x: options.shadowOffset, y: options.shadowOffset},
-		        shadowOpacity: options.shadowOpacityBottom
+				fontSize: 45,
+				fontFamily: 'Rajdhani-Semibold',
+				fill: options.textColorBottom
 			});
 			
 			layer.add(guestNameObject);
@@ -171,27 +158,19 @@ require([
 					
 					var twitterImageObject = new Kinetic.Image({
 						x: 0,
-						y: 0,
+						y: -8,
 						width: twitterImage.naturalWidth,
 						height: twitterImage.naturalHeight,
-						image: twitterImage,
-						shadowColor: options.shadowColorTop,
-				        shadowBlur: 0,
-				        shadowOffset: {x: options.shadowOffset, y: options.shadowOffset},
-						shadowOpacity: options.shadowOpacityTop
+						image: twitterImage
 					});	
 									
 					var guestTwitterObject = new Kinetic.Text({
 						x: twitterImage.naturalWidth + options.twitterOffsetX,
-						y: -5,
+						y: -8,
 						text: guestTwitter,
-						fontSize: 40,
-						fontFamily: 'Reso',
-						fill: options.textColorTop,
-						shadowColor: options.shadowColorTop,
-				        shadowBlur: 0,
-				        shadowOffset: {x: options.shadowOffset, y: options.shadowOffset},
-						shadowOpacity: options.shadowOpacityTop
+						fontSize: 60,
+						fontFamily: 'Rajdhani-Regular',
+						fill: options.textColorTop
 					});
 					
 					twitterGroup.add(twitterImageObject);
